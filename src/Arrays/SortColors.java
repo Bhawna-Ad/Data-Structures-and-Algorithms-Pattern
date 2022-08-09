@@ -1,5 +1,8 @@
 package Arrays;
 
+//https://leetcode.com/problems/sort-colors/
+//Time Complexity: O(N)
+//Space Complexity: O(1)
 public class SortColors {
     class Solution {
         public void sortColors(int[] nums) {

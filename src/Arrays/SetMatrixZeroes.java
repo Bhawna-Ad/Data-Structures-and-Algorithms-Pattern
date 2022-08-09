@@ -1,5 +1,8 @@
 package Arrays;
 
+//https://leetcode.com/problems/set-matrix-zeroes/
+//Time Complexity: O(2*(N*M))
+//Space Complexity: O(1)
 public class SetMatrixZeroes {
     public void setZeroes(int[][] matrix) {
         Boolean isCol = false;

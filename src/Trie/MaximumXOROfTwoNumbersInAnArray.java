@@ -1,5 +1,9 @@
 package Trie;
 /**/
+
+//https://leetcode.com/problems/maximum-xor-of-two-numbers-in-an-array/
+//Time Complexity: O(N*32) + O(M*32)
+//Space Complexity: O(N*32)
 public class MaximumXOROfTwoNumbersInAnArray {
     class Solution {
         class Trie {

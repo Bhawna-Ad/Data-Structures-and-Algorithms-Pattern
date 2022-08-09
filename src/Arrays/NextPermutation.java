@@ -1,5 +1,9 @@
 package Arrays;
 
+//https://leetcode.com/problems/next-permutation/
+//Time Complexity: O(3*N)
+//Space Complexity:O(1)
+
 public class NextPermutation {
     public void nextPermutation(int[] nums) {
         int i = nums.length-2;

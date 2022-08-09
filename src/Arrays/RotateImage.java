@@ -1,5 +1,7 @@
 package Arrays;
-
+//https://leetcode.com/problems/rotate-image/
+//Time Complexity: O(2*N*M)
+//Space Complexity: O(1)
 public class RotateImage {
     class Solution {
         public void rotate(int[][] matrix) {

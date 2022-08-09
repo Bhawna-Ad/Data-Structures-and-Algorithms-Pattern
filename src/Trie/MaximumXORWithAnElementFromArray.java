@@ -1,6 +1,9 @@
 package Trie;
 import java.util.*;
 /**/
+
+//https://leetcode.com/problems/maximum-xor-with-an-element-from-array/submissions/
+//Time Complexity: O(Q*32 + N*32) + O(QlogQ)
 public class MaximumXORWithAnElementFromArray {
     class Solution {
         class Trie {

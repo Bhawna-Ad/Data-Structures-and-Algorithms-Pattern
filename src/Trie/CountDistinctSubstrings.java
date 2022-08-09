@@ -1,5 +1,8 @@
 package Trie;
 
+//https://www.codingninjas.com/codestudio/problems/count-distinct-substrings_985292
+//Time Complexity: Exponential
+//Space Complexity: Exponential
 public class CountDistinctSubstrings {
 
     public class Solution

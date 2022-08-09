@@ -3,6 +3,10 @@ package Arrays;
 import java.util.ArrayList;
 import java.util.List;
 
+//https://leetcode.com/problems/pascals-triangle/
+//Time Complexity: O(N*N)
+//Space Complexity:O(1)
+
 class PascalTriangle {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> list = new ArrayList<>();

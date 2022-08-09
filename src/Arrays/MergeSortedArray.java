@@ -1,5 +1,8 @@
 package Arrays;
 
+//https://leetcode.com/problems/merge-sorted-array/
+//Time Complexity: O(N) + O(M)
+//Space Complexity: O(1)
 public class MergeSortedArray {
     class Solution {
         public void merge(int[] nums1, int m, int[] nums2, int n) {

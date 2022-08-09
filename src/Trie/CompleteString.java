@@ -1,5 +1,8 @@
 package Trie;
 
+//https://www.codingninjas.com/codestudio/problems/complete-string_2687860
+//Time Complexity: Exponential
+//Space Complexity: Exponential
 public class CompleteString {
 
     class Solution {

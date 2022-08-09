@@ -3,6 +3,9 @@ package Trie;
 import java.util.ArrayList;
 import java.util.List;
 
+//https://leetcode.com/problems/subsets/
+//Time Complexity: O(N*2^N)
+//Space Complexity: O(N)
 public class PowerSet {
     class Solution {
         public List<List<Integer>> subsets(int[] nums) {

@@ -4,6 +4,9 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+//https://leetcode.com/problems/merge-intervals/
+//Time Complexity: O(NlogN) + O(N)
+//Space Complexity: O(1)
 public class MergeIntervals {
     class Solution {
         public int[][] merge(int[][] intervals) {

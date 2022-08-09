@@ -1,5 +1,8 @@
 package Trie;
 
+//https://www.codingninjas.com/codestudio/problems/implement-trie_1387095
+//Time Complexity: Exponential
+//Space Complexity: Exponential
 public class ImplementTrieII {
     public class Trie {
         private Node root;

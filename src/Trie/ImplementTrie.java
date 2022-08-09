@@ -1,5 +1,8 @@
 package Trie;
 
+//https://leetcode.com/problems/implement-trie-prefix-tree/
+//Time Complexity: Exponential
+//Space Complexity: Exponential
 public class ImplementTrie {
     class Trie {
         private Node root;
