@@ -66,5 +66,7 @@ public class BitwiseOperators {
         System.out.println("6. To find if the given number is a power of two: n&(n-1)=0");
         System.out.println("7. To create mask in a given range for eg: 000 to 111 where n=3, we can use the range 2powern to 2powern+1 (int this case 1000 to 1111) and create a substring from the next index.");
         System.out.println("bitmask: " + (a & ~(a-1)));
+        int xor = 7;
+        System.out.println("bitmask for the rightmost set bit: " + (xor & (~xor + 1)) + " or " + (xor & -xor));
     }
 }
