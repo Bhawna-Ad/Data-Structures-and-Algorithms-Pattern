@@ -62,8 +62,9 @@ public class KthPermutationSequence {
         numbers.add(n);
         k = k-1;
         while(true) {
-            ans = ans + numbers.get(k/fact);
-            numbers.remove(k/fact);
+            int index = k/fact;
+            ans = ans + numbers.get(index);
+            numbers.remove(index);
 
             if(numbers.size() == 0)
                 break;
@@ -92,19 +93,19 @@ public class KthPermutationSequence {
     * 2nd pass:
     * index = 4 / 2 = 2
     * k = 4 % 2 = 0
-    * 3  0 -> 1 + (2, 4)    ]2!=2   (0 - 1)         <=== index
+    * 3  0 -> 1 + (2, 4)    ]2!=2   (0 - 1)
     *    1 -> 2 + (1, 4)    ]2      (2 - 3)
-    *    2 -> 4 + (1, 2)    ]2      (4 - 5)
+    *    2 -> 4 + (1, 2)    ]2      (4 - 5)         <=== index
     *
     *
     * 3rd pass:
     * index = 0 / 1 = 0
     * k = 0 % 1 = 0
-    * 3  1  0 -> 2 + (4)    ]1!=1   (0)             <=== index
-    *       1 -> 4 + (2)    ]1      (1)
+    * 3  4  0 -> 1 + (2)    ]1!=1   (0)             <=== index
+    *       1 -> 2 + (1)    ]1      (1)
     *
     *
-    * Final Answer : 3  1   2   4
+    * Final Answer : 3  4   1   2
     *
     * */
 }
