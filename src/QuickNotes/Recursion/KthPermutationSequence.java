@@ -8,7 +8,8 @@ import java.util.List;
 public class KthPermutationSequence {
     // Recursive solution will pass but takes too much time.
     // Not really efficient.
-    // Exponential Time Complexity
+    // Exponential Time Complexity: O(N!*N)
+
     class Solution {
         int count = 0;
         String ans = "";
@@ -73,4 +74,37 @@ public class KthPermutationSequence {
 
         return ans;
     }
+
+    /*
+    * Explanation:
+    *
+    * n=4, k=17 (for 0-based indexing find 16th permutation)
+    *
+    * 1st pass:
+    * index = 16 / 6 = 2
+    * k = 16 % 6 = 4
+    * 0 -> 1 + (2, 3, 4)    ]3!=6   (0 - 5)
+    * 1 -> 2 + (1, 3, 4)    ]6      (6 - 11)
+    * 2 -> 3 + (1, 2, 4)    ]6      (12 - 17)       <=== index
+    * 3 -> 4 + (1, 2, 3)    ]6      (18 - 23)
+    *
+    *
+    * 2nd pass:
+    * index = 4 / 2 = 2
+    * k = 4 % 2 = 0
+    * 3  0 -> 1 + (2, 4)    ]2!=2   (0 - 1)         <=== index
+    *    1 -> 2 + (1, 4)    ]2      (2 - 3)
+    *    2 -> 4 + (1, 2)    ]2      (4 - 5)
+    *
+    *
+    * 3rd pass:
+    * index = 0 / 1 = 0
+    * k = 0 % 1 = 0
+    * 3  1  0 -> 2 + (4)    ]1!=1   (0)             <=== index
+    *       1 -> 4 + (2)    ]1      (1)
+    *
+    *
+    * Final Answer : 3  1   2   4
+    *
+    * */
 }
