@@ -57,6 +57,7 @@ public class FrogJumpWithKDistance {
     }
 
     // Tabulation
+    // Time Complexity: O(N*k)
     class TabulationSolution {
         public static int frogJump(int n, int[] heights, int k) {
             Integer[] dp = new Integer[n];
@@ -78,5 +79,7 @@ public class FrogJumpWithKDistance {
             return dp[n-1];
         }
     }
+
+
 
 }
