@@ -1,5 +1,7 @@
 package DynamicProgramming;
 
+// https://leetcode.com/problems/longest-increasing-subsequence/
+// using include exclude technique
 public class LongestIncreasingSubsequence {
 
     // Recursion
@@ -47,5 +49,50 @@ public class LongestIncreasingSubsequence {
         }
     }
 
+    // Tabulation
+    class TabulationSolution {
+        public int lengthOfLIS(int[] nums) {
+            int n = nums.length;
+            Integer[][] dp = new Integer[n+1][n+1];
 
+            for(int i=n; i>=0; i--)
+                dp[n][i] = 0;
+
+            for(int index=n-1; index>=0; index--) {
+                for(int prev=index-1; prev>=-1; prev--) {
+                    int include = 0;
+                    if(prev==-1 || nums[index] > nums[prev])
+                        include = 1 + dp[index+1][index+1];
+
+                    int exclude = dp[index+1][prev+1];
+
+                    dp[index][prev+1] = Math.max(include, exclude);
+                }
+            }
+            return dp[0][0];
+        }
+    }
+
+    // Space Optimization
+    class SpaceOptimizationSolution {
+        public int lengthOfLIS(int[] nums) {
+            int n = nums.length;
+            int[] next = new int[n+1];
+
+            for(int index=n-1; index>=0; index--) {
+                int[] curr = new int[n+1];
+                for(int prev=index-1; prev>=-1; prev--) {
+                    int include = 0;
+                    if(prev==-1 || nums[index] > nums[prev])
+                        include = 1 + next[index+1];
+
+                    int exclude = next[prev+1];
+
+                    curr[prev+1] = Math.max(include, exclude);
+                }
+                next = curr;
+            }
+            return next[0];
+        }
+    }
 }
