@@ -1,6 +1,6 @@
 package DynamicProgramming;
 
-// https://leetcode.com/problems/edit-distance/submissions/
+// https://leetcode.com/problems/edit-distance/
 // Trying all possible operations each time the characters from both strings do not match.
 
 public class EditDistance {
