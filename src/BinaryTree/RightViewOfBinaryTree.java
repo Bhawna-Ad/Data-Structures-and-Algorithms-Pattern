@@ -20,7 +20,7 @@ public class RightViewOfBinaryTree {
     // Iterative Solution
     // for left view add the last element of each level to the list.
     // Time Complexity: O(N)
-    // Space Complexiyt: O(N)
+    // Space Complexity: O(N)
     class IterativeTree {
         //Function to return list containing elements of left view of binary tree.
         ArrayList<Integer> rightView(Node root) {
