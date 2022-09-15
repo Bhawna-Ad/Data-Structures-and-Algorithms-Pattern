@@ -1,5 +1,6 @@
 package BinaryTree;
 
+// https://leetcode.com/problems/maximum-width-of-binary-tree/
 // Use level order traversal
 // Formula = first_index - last_index + 1
 // For a node (i) in 0-based indexing:
