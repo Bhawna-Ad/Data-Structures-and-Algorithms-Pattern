@@ -41,6 +41,8 @@ public class MorrisInorderTraversal {
                     TreeNode prev = root.left;
                     while (prev.right != null && prev.right != root)
                         prev = prev.right;
+
+                    // this means we have reached a leaf node after search left.
                     if (prev.right == null) {
                         prev.right = root;
                         root = root.left;
