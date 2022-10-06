@@ -61,7 +61,7 @@ public class RepeatAndMissingNumber {
  * We will find out the rightmost set bit and create a mask. (the rightmost bit of one of the elements will be off and on for the other).
  * To create the bitmask we use the formula: (xor & (~xor + 1)) same as (xor & -xor).
  * Eg:
- *                   xor = A 1's and 0's     1       B 0's
+ *                   xor = A 1's and 0's     1       B 0's              (B 0's since we need to find the rightmost set bit)
  *                  ~xor = A 0's and 1's     0       B 1's
  *              ~xor + 1 = A 0's and 1's     1       B 0's
  *      xor & (~xor + 1) = A 0's             1       B 0's
