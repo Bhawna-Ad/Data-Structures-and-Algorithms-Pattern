@@ -1,12 +1,56 @@
 package Trie;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
-//https://leetcode.com/problems/subsets/
+// https://practice.geeksforgeeks.org/problems/power-set4302/1#
 //Time Complexity: O(N*2^N)
 //Space Complexity: O(N)
 public class PowerSet {
+
+    class IterativeSolution {
+        public List<String> AllPossibleStrings(String s) {
+            List<String>ans = new ArrayList<>();
+            for(int i=0; i<(1<<s.length()); i++) {
+                String sub = "";
+                for(int j=0; j<s.length(); j++) {
+                    if((i & (1 << j)) != 0)
+                        sub += s.charAt(j);
+                }
+
+                if(sub.length() > 0)
+                    ans.add(sub);
+            }
+
+            Collections.sort(ans);
+            return ans;
+        }
+    }
+
+    class GFGSolution
+    {
+        public List<String> AllPossibleStrings(String s)
+        {
+            // Code here
+            List<String>ans = new ArrayList<>();
+            substrings(s, 0, "", ans);
+            Collections.sort(ans);
+            return ans;
+
+        }
+
+        private void substrings(String s, int index, String sub, List<String>ans) {
+            if(!sub.equals(""))
+                ans.add(sub);
+
+            for(int i=index; i<s.length(); i++) {
+                substrings(s, i+1, sub+s.charAt(i), ans);
+            }
+        }
+    }
+
+
     class Solution {
         public List<List<Integer>> subsets(int[] nums) {
             List<List<Integer>>subset = new ArrayList<>();
